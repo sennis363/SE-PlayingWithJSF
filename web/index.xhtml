@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>A Test of JSF</title>
+        <link rel="stylesheet" type="text/css" href="CSS1.css"></link>
+    </h:head>
+    <h:body>
+        <h:form id="form1"><center>
+            <h1 id="header1">HTML/JSF Image Differences</h1>
+            <table id="table1">
+                <tr id="table1row1">
+                    <td id="row1cell1">
+            <img id="darkpichu1" src="images/210543_dark_pichu.bmp"/><p>This is a HTML tag.</p>
+                    </td>
+                    <td id="row1cell2">
+            <h:graphicImage id="darkpichu2" url="images/210543_dark_pichu.bmp"/><p>This is a JSF tag.</p>
+            </td>
+                </tr>
+                <br/>
+                <tr id="table1row2">
+                    <td id="row2cell1">
+                    <h:inputSecret id="secret1" value="#{secretBean.secret}">Type in a secret message here!</h:inputSecret>
+                    <h:commandButton id="button1" value="Submit Secret Message" action="#{secretBean.encryptSecret()}"></h:commandButton>
+                    <br/>
+                    <h:outputText id="outputText1" value="Answer: #{secretBean.secret}"/>
+                    </td>
+                </tr>
+            </table>
+            </center>
+        </h:form>
+    </h:body>
+</html>
+
